@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hookline — интерактивный демо-виджет одежды на вешалке" />
+    <title>Hookline</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-scene="boutique">
+    <div class="page-shell">
+      <header class="topbar">
+        <nav class="nav">
+          <div class="brand" aria-label="Hookline home">
+            <span class="brand-mark">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M7 28L22 8h4l15 20-4 4-11-9-11 9-4-4z" />
+                <path d="M24 29v12" />
+              </svg>
+            </span>
+            <span class="brand-name">Hookline</span>
+          </div>
+
+          <div class="nav-links" aria-label="Основное меню">
+            <a href="#features">Возможности</a>
+            <a href="#demo">Попробовать</a>
+            <a href="#install">Установка</a>
+            <a href="#pricing">Тарифы</a>
+            <a href="#faq">Вопросы</a>
+          </div>
+
+          <div class="nav-actions">
+            <button class="lang-switch" type="button">
+              <span>Авто</span>
+              <span class="caret">▾</span>
+            </button>
+            <button class="primary-btn" type="button">Ранний доступ</button>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" id="demo">
+          <div class="eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            Наведи, перетащи, кликни — это живой рабочий компонент
+          </div>
+
+          <div class="demo-card" aria-live="polite">
+            <div class="rack" aria-hidden="true"></div>
+
+            <div class="hanger hanger-1" data-product="Chrome Bloom" data-price="$39">
+              <div class="suspender"></div>
+              <div class="hook"></div>
+              <div class="garment garment-tee">
+                <span class="cloth"></span>
+                <span class="shadow"></span>
+              </div>
+            </div>
+
+            <div class="hanger hanger-2" data-product="Tidal Frame" data-price="$52">
+              <div class="suspender"></div>
+              <div class="hook"></div>
+              <div class="garment garment-shirt">
+                <span class="cloth"></span>
+                <span class="shadow"></span>
+              </div>
+            </div>
+
+            <div class="hanger hanger-3" data-product="Moss Echo" data-price="$44">
+              <div class="suspender"></div>
+              <div class="hook"></div>
+              <div class="garment garment-jacket">
+                <span class="cloth"></span>
+                <span class="shadow"></span>
+              </div>
+            </div>
+
+            <div class="brand-watermark">HOOKLINE</div>
+          </div>
+
+          <div class="scene-switcher" aria-label="Сцены демо">
+            <button class="scene-btn active" type="button" data-scene="boutique">
+              <span class="scene-dot" aria-hidden="true"></span>
+              Бутик
+            </button>
+            <button class="scene-btn" type="button" data-scene="night">
+              <span class="scene-dot" aria-hidden="true"></span>
+              Ночь
+            </button>
+            <button class="scene-btn" type="button" data-scene="workshop">
+              <span class="scene-dot" aria-hidden="true"></span>
+              Мастерская
+            </button>
+            <button class="scene-btn" type="button" data-scene="warehouse">
+              <span class="scene-dot" aria-hidden="true"></span>
+              Склад
+            </button>
+            <button class="scene-btn" type="button" data-scene="sunset">
+              <span class="scene-dot" aria-hidden="true"></span>
+              Клуб на закате
+            </button>
+          </div>
+        </section>
+
+        <section class="section" id="features">
+          <div class="section-header">
+            <p class="kicker">Возможности</p>
+            <h2>Компоненты, которые продают одежду до клика.</h2>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="feature-index">01</span>
+              <h3>Нажатие в точку</h3>
+              <p>Каждая вещь ведёт себя как реальный объект: она поворачивается, тянется к курсору и показывает товар без лишней навигации.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-index">02</span>
+              <h3>Сцены под настроение</h3>
+              <p>Меняйте свет, фон и ритм карточки под коллекцию — без потери позиции вещей и физики движения.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-index">03</span>
+              <h3>Продающий инстинкт</h3>
+              <p>Плавные анимации, микровзаимодействия и контекстная карточка товара ускоряют принятие решения.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section split" id="install">
+          <div class="split-copy">
+            <p class="kicker">Установка</p>
+            <h2>Подключите за 15 минут в любом каталоге или storefront.</h2>
+            <p>Один HTML/CSS/JS файл. Без тяжёлых библиотек. Масштабируйте на каталоги, лендинги и страницы новых коллекций.</p>
+            <ul>
+              <li>Поддержка touch и mouse</li>
+              <li>CSS-переменные для мгновенного переключения тем</li>
+              <li>requestAnimationFrame для пружинной физики</li>
+            </ul>
+          </div>
+
+          <div class="install-card">
+            <div class="terminal-bar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <pre><code>npm install
+npm run dev
+open http://localhost:3000</code></pre>
+          </div>
+        </section>
+
+        <section class="section pricing" id="pricing">
+          <div class="section-header narrow">
+            <p class="kicker">Тарифы</p>
+            <h2>Начните с малого и масштабируйте диджитал-студию.</h2>
+          </div>
+
+          <div class="pricing-grid">
+            <article class="price-card">
+              <p class="plan">Starter</p>
+              <h3>$19<span>/мес</span></h3>
+              <ul>
+                <li>1 компонент</li>
+                <li>3 сцены</li>
+                <li>Email support</li>
+              </ul>
+              <button type="button">Выбрать</button>
+            </article>
+
+            <article class="price-card featured">
+              <div class="plan-badge">Популярно</div>
+              <p class="plan">Studio</p>
+              <h3>$49<span>/мес</span></h3>
+              <ul>
+                <li>10 компонентов</li>
+                <li>Уникальные бренды</li>
+                <li>Приоритетная поддержка</li>
+              </ul>
+              <button type="button">Начать</button>
+            </article>
+
+            <article class="price-card">
+              <p class="plan">Scale</p>
+              <h3>$99<span>/мес</span></h3>
+              <ul>
+                <li>Полный SDK</li>
+                <li>Белый лейбл</li>
+                <li>Команда интеграции</li>
+              </ul>
+              <button type="button">Связаться</button>
+            </article>
+          </div>
+        </section>
+
+        <section class="section faq" id="faq">
+          <div class="section-header narrow">
+            <p class="kicker">Вопросы</p>
+            <h2>Ответы на частые вопросы.</h2>
+          </div>
+
+          <div class="faq-list">
+            <details open>
+              <summary>Поддерживает ли виджет мобильные устройства?</summary>
+              <p>Да — он работает и с мышью, и с touch. Движение можно перетаскивать одним пальцем, а карточки товара открываются на кратком тапе.</p>
+            </details>
+            <details>
+              <summary>Можно ли менять цвета и фактуры одежды?</summary>
+              <p>Да. Все оттенки управляются через CSS-переменные, поэтому легко адаптировать демо под разные коллекции и сезонные темы.</p>
+            </details>
+            <details>
+              <summary>Сколько времени занимает интеграция?</summary>
+              <p>Обычно до 20 минут в существующий проект. Компонент полностью автономен и не требует тяжёлой инфраструктуры.</p>
+            </details>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="product-bubble" aria-live="polite" aria-atomic="true">
+      <div class="bubble-copy">
+        <span class="bubble-name">Chrome Bloom</span>
+        <span class="bubble-price">$39</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
